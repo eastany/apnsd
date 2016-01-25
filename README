@@ -1,0 +1,14 @@
+# APNS 
+=======
+```
+cd mocker
+go run gen.go
+cp cert2* ../example/
+cp ca.* ../example
+
+
+go run apn_server.go
+
+cd example
+go run example.go
+```
