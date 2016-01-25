@@ -1,9 +1,3 @@
-/*********************************************
-*  Author: eastany@gmail.com
-*  Last modified: 2016-01-21 16:22
-*  Filename: gen.go
-*  Description:
-*********************************************/
 package main
 
 import (
@@ -22,15 +16,15 @@ func main() {
 		SerialNumber: big.NewInt(1653),
 		Subject: pkix.Name{
 			Country:            []string{"China"},
-			Organization:       []string{"FK"},
-			OrganizationalUnit: []string{"FKU"},
+			Organization:       []string{"Yjwt"},
+			OrganizationalUnit: []string{"YjwtU"},
 		},
 		NotBefore:             time.Now(),
 		NotAfter:              time.Now().AddDate(10, 0, 0),
 		SubjectKeyId:          []byte{1, 2, 3, 4, 5},
 		BasicConstraintsValid: true,
 		IsCA:        true,
-		DNSNames:    []string{"yours.com"},
+		DNSNames:    []string{"eastany.com"},
 		ExtKeyUsage: []x509.ExtKeyUsage{x509.ExtKeyUsageClientAuth, x509.ExtKeyUsageServerAuth},
 		KeyUsage:    x509.KeyUsageDigitalSignature | x509.KeyUsageCertSign,
 	}
